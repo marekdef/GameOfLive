@@ -49,7 +49,7 @@ public class IllegalArgumentsTest {
 				{0, 0, 0}
 		};
 		
-		algo.countAliveNeighbours(testBoard, 0, 2);
+		algo.countAliveNeighbours(testBoard, 0, 3);
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
