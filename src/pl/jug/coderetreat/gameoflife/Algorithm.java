@@ -8,7 +8,7 @@ public class Algorithm {
 		}
 		
 		if(i < 0 || j < 0 || i >= testBoard.length || j >= testBoard[0].length) {
-			throw new IllegalArgumentException("Wrong coordinates of a cell");
+			throw new IllegalArgumentException(String.format("Coordinates %d %d out of bounds %d %d", i, j, testBoard.length, testBoard[0].length));
 		}
 		
 		int result = -1;
