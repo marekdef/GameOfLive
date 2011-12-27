@@ -39,6 +39,16 @@ public class Algorithm {
 			eY = j + 1;
 		}
 		
+		for(int r = sY; r <= eY; r++) {
+			for(int c = sX; c <= eX; c++) {
+				result += testBoard[r][c];
+			}
+		}
+		
+		if(result < 0) {
+			result = 0;
+		}
+		
 		return result;		
 	}
 
