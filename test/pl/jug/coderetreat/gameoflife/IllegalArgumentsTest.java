@@ -57,4 +57,14 @@ public class IllegalArgumentsTest {
 		algo.countAliveNeighbours(null, 0, 0);
 	}
 	
+	@Test(expected = IllegalArgumentException.class)
+	public void testTooBigValueInCell() {
+		int testBoard[][] = new int[][] {
+				{0, 1, 0},
+				{0, 5, 0}
+		};
+		
+		algo.countAliveNeighbours(testBoard, 1, 1);
+	}
+	
 }
