@@ -13,13 +13,13 @@ public class Algorithm {
 		
 		int result = -1;
 		
-		int sX = Math.max(0, i - 1);
-		int sY = Math.max(0, j - 1);
-		int eX = Math.min(testBoard.length -1, i + 1);
-		int eY = Math.min(testBoard[0].length, j + 1);
+		int startX = Math.max(0, i - 1);
+		int startY = Math.max(0, j - 1);
+		int endX = Math.min(testBoard.length -1, i + 1);
+		int endY = Math.min(testBoard[0].length, j + 1);
 		
-		for(int r = sY; r <= eY; r++) {
-			for(int c = sX; c <= eX; c++) {
+		for(int r = startY; r <= endY; r++) {
+			for(int c = startX; c <= endX; c++) {
 				result += testBoard[r][c];
 			}
 		}
