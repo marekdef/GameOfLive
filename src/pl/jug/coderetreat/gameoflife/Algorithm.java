@@ -13,31 +13,10 @@ public class Algorithm {
 		
 		int result = -1;
 		
-		int sX, sY, eX, eY; // start X and Y, end X and Y
-		
-		if(i == 0) {
-			sX = 0;
-		} else {
-			sX = i - 1;
-		}
-		
-		if(j == 0) {
-			sY = 0;
-		} else {
-			sY = j - 1;
-		}
-		
-		if(i == testBoard.length - 1) {
-			eX = testBoard.length -1;
-		} else {
-			eX = i + 1;
-		}
-		
-		if(j == testBoard[0].length - 1) {
-			eY = testBoard[0].length - 1;
-		} else {
-			eY = j + 1;
-		}
+		int sX = Math.max(0, i - 1);
+		int sY = Math.max(0, j - 1);
+		int eX = Math.min(testBoard.length -1, i + 1);
+		int eY = Math.min(testBoard[0].length, j + 1);
 		
 		for(int r = sY; r <= eY; r++) {
 			for(int c = sX; c <= eX; c++) {
