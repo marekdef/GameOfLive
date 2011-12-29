@@ -16,7 +16,7 @@ public class Algorithm {
 		int startX = Math.max(0, i - 1);
 		int startY = Math.max(0, j - 1);
 		int endX = Math.min(testBoard.length -1, i + 1);
-		int endY = Math.min(testBoard[0].length, j + 1);
+		int endY = Math.min(testBoard[0].length - 1, j + 1);
 		
 		for(int r = startY; r <= endY; r++) {
 			for(int c = startX; c <= endX; c++) {
