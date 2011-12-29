@@ -20,7 +20,7 @@ public class Algorithm {
 		
 		for(int c = startColumn; c <= endColumn; c++) {
 			for(int r = startRow; r <= endRow; r++) {
-				result += testBoard[r][c];
+				result += testBoard[r][c] > 0 ? 1 : 0;
 			}
 		}
 		
