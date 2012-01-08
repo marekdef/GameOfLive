@@ -11,7 +11,7 @@ public class Algorithm {
 			throw new IllegalArgumentException(String.format("Coordinates %d %d out of bounds %d %d", row, column, testBoard.length, testBoard[0].length));
 		}
 		
-		int result = -1;
+		int result = 0;
 		
 		int startRow = Math.max(0, row - 1);
 		int startColumn = Math.max(0, column - 1);
@@ -20,6 +20,9 @@ public class Algorithm {
 		
 		for(int c = startColumn; c <= endColumn; c++) {
 			for(int r = startRow; r <= endRow; r++) {
+				if(c == column && r == row) {
+					continue;
+				}
 				result += testBoard[r][c] > 0 ? 1 : 0;
 			}
 		}
