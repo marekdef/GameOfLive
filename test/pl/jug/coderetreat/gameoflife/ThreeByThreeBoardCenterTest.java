@@ -35,7 +35,7 @@ public class ThreeByThreeBoardCenterTest {
 				{0, 0, 0}
 		};
 		
-		int countNeighbours = algo.countAliveNeighbours(testBoard, 1, 0);
+		int countNeighbours = algo.countAliveNeighbours(testBoard, 1, 1);
 		
 		Assert.assertEquals(0, countNeighbours);
 	}
